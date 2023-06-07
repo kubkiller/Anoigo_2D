@@ -1,0 +1,552 @@
+fileFormatVersion: 2
+guid: 3520a749b2789b34d87294f7fc70236a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0.74
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Player Character_anoigo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41c7d879d1d375a41acab32c6c3f5711
+      internalID: -721727278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Character_anoigo_1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 150
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4028236dd0be10947a4e3356727ab7f9
+      internalID: -1832274691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Character_anoigo_2
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 150
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deca11e9952c4b7419d123f4a1632fa2
+      internalID: -88001129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Character_anoigo_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 102
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04599bb90b5b90c47937107a9bf79aee
+      internalID: 75002690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Character_anoigo_4
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 102
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82cb1dbf69e8d4f4eb70580ae54109b9
+      internalID: -1839618298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Character_anoigo_5
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 102
+        width: 47
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fba80489410962c4f8c4dd56bc0a8628
+      internalID: -2122885969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Character_anoigo_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 53
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a287320699677d4b87d611d2ec9f936
+      internalID: -905703290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Character_anoigo_7
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 53
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd2153260ab785c4a8a8eae478e4763a
+      internalID: 457493785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Character_anoigo_8
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 53
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fddab87a74a120242818a126842a3ecd
+      internalID: 44709638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Character_anoigo_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84ef81f20a953c24d8f1fec22b2f3894
+      internalID: -1286677357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Character_anoigo_10
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 4
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c1225c56fb36e47af45b92e1a3c2f5
+      internalID: -1344832117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Character_anoigo_11
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 4
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65b72d6a56ea34343af93a49ee7eada1
+      internalID: -678926142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline:
+    - - {x: -86, y: -48}
+      - {x: -95, y: -52}
+      - {x: -95, y: -74}
+      - {x: -92, y: -85}
+      - {x: -84, y: -96}
+      - {x: -61, y: -96}
+      - {x: -60, y: -94}
+      - {x: -60, y: -48}
+    - - {x: -48, y: 97}
+      - {x: -48, y: -78}
+      - {x: -47, y: -96}
+      - {x: -11, y: -96}
+      - {x: -11, y: 97}
+    - - {x: 14, y: -48}
+      - {x: 8, y: -49}
+      - {x: 2, y: -53}
+      - {x: 1, y: -57}
+      - {x: 1, y: -89}
+      - {x: 2, y: -93}
+      - {x: 14, y: -96}
+      - {x: 29, y: -96}
+      - {x: 37, y: -90}
+      - {x: 37, y: -50}
+      - {x: 31, y: -48}
+    - - {x: -92, y: 0}
+      - {x: -94, y: -6}
+      - {x: -94, y: -35}
+      - {x: -88, y: -48}
+      - {x: -60, y: -48}
+      - {x: -59, y: -32}
+      - {x: -59, y: -6}
+      - {x: -69, y: 0}
+    - - {x: 2, y: -37}
+      - {x: 5, y: -48}
+      - {x: 35, y: -48}
+      - {x: 37, y: -47}
+      - {x: 37, y: -3}
+      - {x: 36, y: 0}
+      - {x: 4, y: 0}
+      - {x: 2, y: -2}
+    - - {x: -64, y: 48}
+      - {x: -93, y: 48}
+      - {x: -96, y: 41}
+      - {x: -96, y: 12}
+      - {x: -90, y: 0}
+      - {x: -72, y: 0}
+      - {x: -67, y: 2}
+      - {x: -61, y: 10}
+      - {x: -61, y: 43}
+    - - {x: 9, y: 48}
+      - {x: 0, y: 44}
+      - {x: 0, y: 22}
+      - {x: 3, y: 9}
+      - {x: 10, y: 0}
+      - {x: 27, y: 0}
+      - {x: 35, y: 18}
+      - {x: 35, y: 46}
+      - {x: 33, y: 48}
+    - - {x: -87, y: 96}
+      - {x: -95, y: 88}
+      - {x: -95, y: 57}
+      - {x: -84, y: 48}
+      - {x: -72, y: 48}
+      - {x: -60, y: 55}
+      - {x: -60, y: 90}
+      - {x: -63, y: 96}
+    - - {x: 31, y: 96}
+      - {x: 9, y: 96}
+      - {x: 0, y: 92}
+      - {x: 0, y: 53}
+      - {x: 12, y: 48}
+      - {x: 32, y: 48}
+      - {x: 36, y: 54}
+      - {x: 36, y: 87}
+      - {x: 35, y: 91}
+    - - {x: 68.56706, y: -17.518715}
+      - {x: 68.56706, y: 22.963638}
+      - {x: 80.19498, y: 22.963638}
+      - {x: 80.19498, y: -17.518715}
+    physicsShape:
+    - - {x: -86, y: -48}
+      - {x: -95, y: -52}
+      - {x: -95, y: -74}
+      - {x: -92, y: -85}
+      - {x: -84, y: -96}
+      - {x: -61, y: -96}
+      - {x: -60, y: -94}
+      - {x: -60, y: -48}
+    - - {x: -48, y: 97}
+      - {x: -48, y: -78}
+      - {x: -47, y: -96}
+      - {x: -11, y: -96}
+      - {x: -11, y: 97}
+    - - {x: 14, y: -48}
+      - {x: 8, y: -49}
+      - {x: 2, y: -53}
+      - {x: 1, y: -57}
+      - {x: 1, y: -89}
+      - {x: 2, y: -93}
+      - {x: 14, y: -96}
+      - {x: 29, y: -96}
+      - {x: 37, y: -90}
+      - {x: 37, y: -50}
+      - {x: 31, y: -48}
+    - - {x: -92, y: 0}
+      - {x: -94, y: -6}
+      - {x: -94, y: -35}
+      - {x: -88, y: -48}
+      - {x: -60, y: -48}
+      - {x: -59, y: -32}
+      - {x: -59, y: -6}
+      - {x: -69, y: 0}
+    - - {x: 2, y: -37}
+      - {x: 5, y: -48}
+      - {x: 35, y: -48}
+      - {x: 37, y: -47}
+      - {x: 37, y: -3}
+      - {x: 36, y: 0}
+      - {x: 4, y: 0}
+      - {x: 2, y: -2}
+    - - {x: -64, y: 48}
+      - {x: -93, y: 48}
+      - {x: -96, y: 41}
+      - {x: -96, y: 12}
+      - {x: -90, y: 0}
+      - {x: -72, y: 0}
+      - {x: -67, y: 2}
+      - {x: -61, y: 10}
+      - {x: -61, y: 43}
+    - - {x: 9, y: 48}
+      - {x: 0, y: 44}
+      - {x: 0, y: 22}
+      - {x: 3, y: 9}
+      - {x: 10, y: 0}
+      - {x: 27, y: 0}
+      - {x: 35, y: 18}
+      - {x: 35, y: 46}
+      - {x: 33, y: 48}
+    - - {x: -87, y: 96}
+      - {x: -95, y: 88}
+      - {x: -95, y: 57}
+      - {x: -84, y: 48}
+      - {x: -72, y: 48}
+      - {x: -60, y: 55}
+      - {x: -60, y: 90}
+      - {x: -63, y: 96}
+    - - {x: 31, y: 96}
+      - {x: 9, y: 96}
+      - {x: 0, y: 92}
+      - {x: 0, y: 53}
+      - {x: 12, y: 48}
+      - {x: 32, y: 48}
+      - {x: 36, y: 54}
+      - {x: 36, y: 87}
+      - {x: 35, y: 91}
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Player Character_anoigo_6: -905703290
+      Player Character_anoigo_10: -1344832117
+      Player Character_anoigo_9: -1286677357
+      Player Character_anoigo_11: -678926142
+      Player Character_anoigo_0: -721727278
+      Player Character_anoigo_7: 457493785
+      Player Character_anoigo_5: -2122885969
+      Player Character_anoigo_1: -1832274691
+      Player Character_anoigo_3: 75002690
+      Player Character_anoigo_4: -1839618298
+      Player Character_anoigo_2: -88001129
+      Player Character_anoigo_8: 44709638
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
