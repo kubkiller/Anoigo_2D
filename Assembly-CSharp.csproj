@@ -57,9 +57,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\MovingObject.cs" />
-    <Compile Include="Assets\Script\CameraManager.cs" />
     <Compile Include="Assets\Interect.cs" />
     <Compile Include="Assets\MassageManager.cs" />
+    <Compile Include="Assets\Script\CameraManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
