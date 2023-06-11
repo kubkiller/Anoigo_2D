@@ -10,6 +10,7 @@ public class Menu : MonoBehaviour
     public GameObject[] selection_position;
     public GameObject menu_select;
     public bool IsMenu = false;
+    [SerializeField]
     private int M_index = 0;
 
     public Dictionary<string, string> Itemdic = new Dictionary<string, string>();
@@ -19,6 +20,7 @@ public class Menu : MonoBehaviour
     [Header("Inventory")]
     public Text[] Items;
     public GameObject inventory;
+    [SerializeField]
     private int In_index = 0;
     public GameObject in_select;
     public Text explan_text;
@@ -42,13 +44,9 @@ public class Menu : MonoBehaviour
             IsMenu = true;
             menu.SetActive(true);
         }
-        if (IsMenu == true)
+        if (IsMenu)
         {
-            if (IsInven)
-            {
-
-            }
-            else
+            if (!IsInven)
             {
                 if (Input.GetKeyDown(KeyCode.UpArrow))
                 {
@@ -59,7 +57,7 @@ public class Menu : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.DownArrow))
                 {
                     M_index++;
-                    if (M_index >= 4) M_index = 4;
+                    if (M_index >= 3) M_index = 3;
                     menu_select.transform.position = selection_position[M_index].transform.position;
                 }
                 if (Input.GetKeyDown(KeyCode.Z))
@@ -71,10 +69,37 @@ public class Menu : MonoBehaviour
                 }
                 if (Input.GetKeyDown(KeyCode.X))
                 {
+                    M_index = 0;
                     menu.SetActive(false);
                     IsMenu = false;
                 }
-
+            }
+            else if (IsInven)
+            {
+                if (Input.GetKeyDown(KeyCode.LeftArrow))
+                {
+                    In_index--;
+                    if (In_index <= 0) In_index = 0;
+                    in_select.transform.position = Items[In_index].gameObject.transform.position;
+                }
+                if (Input.GetKeyDown(KeyCode.RightArrow))
+                {
+                    In_index++;
+                    if (In_index >= ItemList.Count) In_index = ItemList.Count - 1;
+                    in_select.transform.position = Items[In_index].gameObject.transform.position;
+                }
+                if (Input.GetKeyDown(KeyCode.X))
+                {
+                    for (int i = 0; i < ItemList.Count; i++)
+                    {
+                        Items[i].text = "";
+                        Items[i].gameObject.SetActive(false);
+                    }
+                    In_index = 0;
+                    IsInven = false;
+                    inventory.SetActive(false);
+                }
+                explan_text.text = Itemdic[ItemList[In_index]];
             }
         }
     }
@@ -95,28 +120,5 @@ public class Menu : MonoBehaviour
                 Items[i].text = ItemList[i];
             }
         }
-        while (!Input.GetKeyDown(KeyCode.X)) 
-        {
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                In_index--;
-                if (In_index <= 0) In_index = 0;
-                in_select.transform.position = Items[In_index].transform.position;
-            }
-            if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                In_index++;
-                if (In_index >= ItemList.Count) In_index = ItemList.Count;
-                in_select.transform.position = Items[M_index].transform.position;
-            }
-            explan_text.text = Itemdic[ItemList[In_index]];
-        }
-        for (int i = 0; i < ItemList.Count; i++)
-        {
-            Items[i].text = "";
-            Items[i].gameObject.SetActive(false);
-        }
-        IsInven = false;
-        inventory.SetActive(false);
     }
 }
