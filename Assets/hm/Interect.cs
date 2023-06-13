@@ -8,7 +8,7 @@ public class Interect : MonoBehaviour
 
     Vector3 DirVec;
 
-    float speed = 0.03f;
+    float speed = 0.05f;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,12 +29,8 @@ public class Interect : MonoBehaviour
         if (xDir != 0 || yDir != 0)
             Move(DirVec, speed);
 
-        SetRay(DirVec, 2f);
+        SetRay(DirVec, 1f);
         //Debug.Log(xDir.ToString() + yDir.ToString() +"∑π¿Ã");
-    }
-    private void FixedUpdate()
-    {
-        
     }
 
     public void Move(Vector3 moveDir, float speed)
@@ -47,9 +43,9 @@ public class Interect : MonoBehaviour
         Debug.DrawRay(transform.position, rayDir * dis, Color.red);
         RaycastHit2D hit = Physics2D.Raycast(transform.position, rayDir, dis, LayerMask.GetMask("Ray"));
 
-        if (hit.collider!=null && Input.GetKeyDown(KeyCode.Z))
+        if (hit.collider != null && Input.GetKeyDown(KeyCode.Z))
         {
-            
+            MassageManager.instance.gameObject.SetActive(true);
         }
     }
 }
