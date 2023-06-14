@@ -26,6 +26,17 @@ public class Menu : MonoBehaviour
     public Text explan_text;
     public bool IsInven = false;
 
+    [Header("Sound")] //사운드 부분
+    public GameObject sound;
+    [SerializeField]
+    private int Sound_index = 0;
+    public GameObject sound_select;
+    public bool IsSound = false;
+    public GameObject background_Sound_Slider;
+    public GameObject active_Sound_Slider;
+    public List<AudioSource> SoundList = new List<AudioSource>();
+    public Text background_Sound_text;
+    public Text active_Sound_text;
 
     void Start()
     {
@@ -48,8 +59,8 @@ public class Menu : MonoBehaviour
         }
         if (IsMenu)
         {
-            if (!IsInven)
-            {//인벤이 안열려 있을때 실행
+            if (!IsInven && !IsSound)
+            {//다른 창이 안열려 있을때 실행
                 if (Input.GetKeyDown(KeyCode.UpArrow))
                 {//윗키 누르면 인덱스줄여주기(0이 가장 처음)
                     M_index--;
@@ -67,9 +78,10 @@ public class Menu : MonoBehaviour
                     if (M_index == 0)
                     {//첫번째는 인벤토리
                         Inventory();
-                    }else if(M_index == 1)
+                    }
+                    else if (M_index == 1)
                     {//두번째는 음량
-                        
+                        Sound();
                     }
                 }
                 if (Input.GetKeyDown(KeyCode.X))
@@ -79,6 +91,7 @@ public class Menu : MonoBehaviour
                     IsMenu = false;
                 }
             }
+
             else if (IsInven)
             {//인벤토리가 켜져있으면 실행
                 if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -106,6 +119,11 @@ public class Menu : MonoBehaviour
                 }//아이템 설명 텍스트는 항상 실행
                 explan_text.text = Itemdic[ItemList[In_index]];
             }
+
+            else if (IsSound)
+            {
+
+            }
         }
     }
 
@@ -125,5 +143,11 @@ public class Menu : MonoBehaviour
                 Items[i].text = ItemList[i];
             }
         }
+    }
+
+    private void Sound()
+    {
+        IsSound = true;
+        sound.SetActive(true);
     }
 }
