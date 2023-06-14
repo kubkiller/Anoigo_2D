@@ -2421,6 +2421,7 @@ MonoBehaviour:
   - {fileID: 1598795420}
   menu_select: {fileID: 997705109}
   IsMenu: 0
+  M_index: 0
   ItemList: []
   Items:
   - {fileID: 913521730}
@@ -2432,6 +2433,7 @@ MonoBehaviour:
   - {fileID: 343690356}
   - {fileID: 516267463}
   inventory: {fileID: 1163641164}
+  In_index: 0
   in_select: {fileID: 697962966}
   explan_text: {fileID: 296919826}
   IsInven: 0
