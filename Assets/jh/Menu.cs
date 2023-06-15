@@ -12,6 +12,7 @@ public class Menu : MonoBehaviour
     public bool IsMenu = false;
     [SerializeField]
     private int M_index = 0;
+    public float play_time;
 
     public Dictionary<string, string> Itemdic = new Dictionary<string, string>(); //아이템 딕셔너리
     [HideInInspector]
@@ -32,11 +33,22 @@ public class Menu : MonoBehaviour
     private int Sound_index = 0;
     public GameObject sound_select;
     public bool IsSound = false;
-    public GameObject background_Sound_Slider;
-    public GameObject active_Sound_Slider;
-    public List<AudioSource> SoundList = new List<AudioSource>();
+    public GameObject[] Sound_Slider;
+    public List<AudioSource> Background_SoundList = new List<AudioSource>();
+    public List<AudioSource> Active_SoundList = new List<AudioSource>();
     public Text background_Sound_text;
     public Text active_Sound_text;
+
+    [Header("Save")] //세이브 부분
+    public Savedata savedata = new Savedata();
+    public GameObject[] save_slot;
+    public GameObject save;
+    [SerializeField]
+    private int save_index = 0;
+    private int max_index = 0;
+    public GameObject save_select;
+    public bool IsSave = false;
+    public Save SaveScript;
 
     void Start()
     {
@@ -59,7 +71,7 @@ public class Menu : MonoBehaviour
         }
         if (IsMenu)
         {
-            if (!IsInven && !IsSound)
+            if (!IsInven && !IsSound && !IsSave)
             {//다른 창이 안열려 있을때 실행
                 if (Input.GetKeyDown(KeyCode.UpArrow))
                 {//윗키 누르면 인덱스줄여주기(0이 가장 처음)
@@ -82,6 +94,10 @@ public class Menu : MonoBehaviour
                     else if (M_index == 1)
                     {//두번째는 음량
                         Sound();
+                    }
+                    else if(M_index == 2)
+                    {//세번째는 세이브
+                        Save();
                     }
                 }
                 if (Input.GetKeyDown(KeyCode.X))
@@ -121,6 +137,68 @@ public class Menu : MonoBehaviour
             }
 
             else if (IsSound)
+            {//사운드가 켜져있으면 실행
+                if (Input.GetKeyDown(KeyCode.LeftArrow))
+                {//볼륨 줄이기
+                    Sound_Slider[Sound_index].GetComponent<Slider>().value -= 0.1f;
+                    if(Sound_index == 0)
+                    {//배경음악 선택
+                        for (int i = 0; i < Background_SoundList.Count; i++)
+                        {
+                            Background_SoundList[i].volume = Sound_Slider[Sound_index].GetComponent<Slider>().value;//모든 사운드에 볼륨 적용
+                        }
+                        background_Sound_text.text = ((int)Mathf.Round(Sound_Slider[Sound_index].GetComponent<Slider>().value*10)).ToString();//텍스트 적용
+                    }
+                    else
+                    {//효과음 선택
+                        for (int i = 0; i < Active_SoundList.Count; i++)
+                        {
+                            Active_SoundList[i].volume = Sound_Slider[Sound_index].GetComponent<Slider>().value;//모든 사운드에 볼륨 적용
+                        }
+                        active_Sound_text.text = ((int)Mathf.Round(Sound_Slider[Sound_index].GetComponent<Slider>().value * 10)).ToString();//텍스트 적용
+                    }
+                }
+                if (Input.GetKeyDown(KeyCode.RightArrow))
+                {//볼륨 키우기
+                    Sound_Slider[Sound_index].GetComponent<Slider>().value += 0.1f;
+                    if (Sound_index == 0)
+                    {//배경음악 선택
+                        for (int i = 0; i < Background_SoundList.Count; i++)
+                        {
+                            Background_SoundList[i].volume = Sound_Slider[Sound_index].GetComponent<Slider>().value;//모든 사운드에 볼륨 적용
+                        }
+                        background_Sound_text.text = ((int)Mathf.Round(Sound_Slider[Sound_index].GetComponent<Slider>().value * 10)).ToString();//텍스트 적용
+                    }
+                    else
+                    {//효과음 선택
+                        for (int i = 0; i < Active_SoundList.Count; i++)
+                        {
+                            Active_SoundList[i].volume = Sound_Slider[Sound_index].GetComponent<Slider>().value;//모든 사운드에 볼륨 적용
+                        }
+                        active_Sound_text.text = ((int)Mathf.Round(Sound_Slider[Sound_index].GetComponent<Slider>().value * 10)).ToString();//텍스트 적용
+                    }
+                }
+                if (Input.GetKeyDown(KeyCode.UpArrow))
+                {//인덱스 줄이기
+                    Sound_index--;
+                    if (Sound_index <= 0) Sound_index = 0; //0보다 작아지면 0으로 고정
+                    sound_select.transform.position = new Vector2(sound_select.transform.position.x, Sound_Slider[Sound_index].transform.position.y);//선택 위치 바꾸기
+                }
+                if (Input.GetKeyDown(KeyCode.DownArrow))
+                {//인덱스 올리기
+                    Sound_index++;
+                    if (Sound_index >= Sound_Slider.Length) Sound_index = Sound_Slider.Length-1;//인덱스가 넘으면 최대로 고정
+                    sound_select.transform.position = new Vector2(sound_select.transform.position.x, Sound_Slider[Sound_index].transform.position.y);//선택 위치 바꾸기
+                }
+                if (Input.GetKeyDown(KeyCode.X))
+                {//사운드 끄기
+                    IsSound = false;
+                    sound.SetActive(false); 
+                    menu_select.GetComponent<Animator>().enabled = true;
+                }
+            }
+
+            else if (IsSave)
             {
 
             }
@@ -131,11 +209,8 @@ public class Menu : MonoBehaviour
     {
         IsInven = true;//인벤토리 열기
         inventory.SetActive(true);
-        if (ItemList.Count == 0)//아이템이 없다면 첫번째로 고정
-        {
-            in_select.transform.position = Items[0].transform.position;
-        }
-        else   //아니라면 아이템 갯수만큼 텍스트를 활성화
+        in_select.transform.position = Items[0].transform.position;//첫번째로 고정
+        if(ItemList.Count > 0)   //아이템이 있다면 아이템 갯수만큼 텍스트를 활성화
         {
             for (int i = 0; i < ItemList.Count; i++)
             {
@@ -149,5 +224,32 @@ public class Menu : MonoBehaviour
     {
         IsSound = true;
         sound.SetActive(true);
+        menu_select.GetComponent<Animator>().enabled = false;
     }
+
+    private void Save()
+    {
+        IsSave = true;
+        for (int i = 1; i < 5; i++)
+        {
+            savedata.Files[i].text = "파일 " + i;
+        }
+        max_index = SaveScript.SaveSearch();
+        if (max_index != 0)
+        {
+            for (int i = 0; i < save_slot.Length; i++)
+            {
+                save_slot[i].SetActive(true);
+            }
+        }
+    }
+}
+[System.Serializable]
+public class Savedata {
+
+    public Text[] Files;
+    public Image[] Images;
+    public Text[] Times;
+    public Text[] Positions;
+
 }

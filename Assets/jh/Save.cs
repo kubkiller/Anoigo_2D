@@ -37,6 +37,24 @@ public class Save : MonoBehaviour
         myData.GetData();
     }
 
+    public int SaveSearch()
+    {
+        int cnt = 0;
+        for (int i = 1; i < 11; i++)
+        {
+            if (File.Exists("PlayerData" + i))
+            {
+                cnt++;
+            }
+            else
+            {
+                break;
+            }
+
+        }
+        return cnt;
+    }
+
     public void LoadData()
     {
         try
