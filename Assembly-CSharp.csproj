@@ -65,6 +65,7 @@
     <Compile Include="Assets\hm\Enemy.cs" />
     <Compile Include="Assets\jh\Menu.cs" />
     <Compile Include="Assets\ub\CameraManager.cs" />
+    <Compile Include="Assets\jh\Exit.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

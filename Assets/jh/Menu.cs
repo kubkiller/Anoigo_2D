@@ -17,6 +17,7 @@ public class Menu : MonoBehaviour
     public Inventory inventory;
     public Sound sound;
     public Save save;
+    public Exit exit;
 
 
 
@@ -49,6 +50,10 @@ public class Menu : MonoBehaviour
             {
                 save.Save_Open();
             }
+            else if (exit.IsExit)
+            {
+                exit.Exit_Open();
+            }
             else
             {//다른 창이 안열려 있을때 실행
                 if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -76,6 +81,10 @@ public class Menu : MonoBehaviour
                     else if (M_index == 2)
                     {//세번째는 세이브
                         save.Save_Setting();
+                    }
+                    else if (M_index == 3)
+                    {//네번째는 나가기
+                        exit.Exit_Setting();
                     }
                 }
                 if (Input.GetKeyDown(KeyCode.X))
