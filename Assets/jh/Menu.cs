@@ -18,8 +18,9 @@ public class Menu : MonoBehaviour
     public Sound sound;
     public Save save;
     public Exit exit;
-
-
+    [SerializeField]
+    TextAsset TMI_text;
+    public Text inter_TMI;
 
     void Start()
     {
@@ -28,11 +29,12 @@ public class Menu : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (!IsMenu && Input.GetKeyDown(KeyCode.C))
         {//C 키 누르면 메뉴 열기
             IsMenu = true;
             menu_select.transform.position = selection_position[M_index].transform.position;
             menu.SetActive(true);
+            Player_interface();
         }
         if (IsMenu)
         {
@@ -95,5 +97,14 @@ public class Menu : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void Player_interface(){
+        string TMI = "";
+        string[] TMIs = TMI_text.text.Split("\n");
+
+        TMI = TMIs[(int)Random.Range(0, TMIs.Length)];
+
+        inter_TMI.text = "TMI - " + TMI;
     }
 }

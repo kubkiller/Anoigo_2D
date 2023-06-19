@@ -1952,6 +1952,8 @@ MonoBehaviour:
   sound: {fileID: 497210546}
   save: {fileID: 497210545}
   exit: {fileID: 497210548}
+  TMI_text: {fileID: 4900000, guid: b1cd756b935fd90438cd5e64864c363a, type: 3}
+  inter_TMI: {fileID: 1048768526}
 --- !u!114 &497210545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2992,7 +2994,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &730930658
 RectTransform:
   m_ObjectHideFlags: 0
