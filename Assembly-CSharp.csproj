@@ -56,18 +56,18 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\hm\MassageManager.cs" />
     <Compile Include="Assets\jh\Inventory.cs" />
     <Compile Include="Assets\jh\Sound.cs" />
     <Compile Include="Assets\jh\Save.cs" />
     <Compile Include="Assets\ub\MovingObject.cs" />
-    <Compile Include="Assets\hm\Interect.cs" />
-    <Compile Include="Assets\hm\MassageManager.cs" />
+    <Compile Include="Assets\hm\DontDestroyObject.cs" />
     <Compile Include="Assets\hm\Enemy.cs" />
     <Compile Include="Assets\jh\Menu.cs" />
     <Compile Include="Assets\jh\Exit.cs" />
     <Compile Include="Assets\ub\CameraManager.cs" />
+    <Compile Include="Assets\hm\Interect.cs" />
     <Compile Include="Assets\jh\Player.cs" />
-    <Compile Include="Assets\DontDestroyObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

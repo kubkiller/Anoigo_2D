@@ -305,6 +305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 78811785}
   - component: {fileID: 78811786}
+  - component: {fileID: 78811787}
   m_Layer: 0
   m_Name: Massage
   m_TagString: Untagged
@@ -342,19 +343,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0b16a58100fdc246b4beafa007a7c75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &78811787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 78811784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37f5a2e1ae7144f41a162299209cf061, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   massageTxt: {fileID: 429045563}
   sp2: {fileID: 843518696}
   system: {fileID: 4900000, guid: 6bd4dfb1268b8384c82effe81eaa854e, type: 3}
   speech: {fileID: 4900000, guid: e864160345eeca049b87355c87c493d2, type: 3}
   SpeechMassage: []
-  spriteList:
-  - charName: A
-    charSprite:
-    - {fileID: -1717883366, guid: 26b00d7a23984074bbf64f123806cb14, type: 3}
-    - {fileID: -1228798578, guid: 26b00d7a23984074bbf64f123806cb14, type: 3}
-  - charName: B
-    charSprite:
-    - {fileID: -165731176, guid: 26b00d7a23984074bbf64f123806cb14, type: 3}
+  spriteList: []
   CharName: []
 --- !u!1 &101620491
 GameObject:
