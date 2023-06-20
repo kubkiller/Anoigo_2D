@@ -153,7 +153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -506,7 +505,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &142354566
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -523,8 +522,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &142354567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1896,7 +1894,7 @@ GameObject:
   - component: {fileID: 497210544}
   - component: {fileID: 497210547}
   - component: {fileID: 497210546}
-  - component: {fileID: 497210545}
+  - component: {fileID: 497210549}
   - component: {fileID: 497210548}
   m_Layer: 5
   m_Name: MenuManager
@@ -1950,53 +1948,10 @@ MonoBehaviour:
   play_time: 0
   inventory: {fileID: 497210547}
   sound: {fileID: 497210546}
-  save: {fileID: 497210545}
+  save: {fileID: 497210549}
   exit: {fileID: 497210548}
   TMI_text: {fileID: 4900000, guid: b1cd756b935fd90438cd5e64864c363a, type: 3}
   inter_TMI: {fileID: 1048768526}
---- !u!114 &497210545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 497210541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa350441ea5c3184fb510c0733d0a3e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  savedata:
-    Files:
-    - {fileID: 114117446}
-    - {fileID: 190324091}
-    - {fileID: 74061156}
-    - {fileID: 906174585}
-    Images:
-    - {fileID: 86175670}
-    - {fileID: 448417760}
-    - {fileID: 1820929985}
-    - {fileID: 2109191359}
-    Times:
-    - {fileID: 1321283838}
-    - {fileID: 780746620}
-    - {fileID: 1144539920}
-    - {fileID: 245422488}
-    Positions:
-    - {fileID: 920104330}
-    - {fileID: 1056615025}
-    - {fileID: 1518087242}
-    - {fileID: 2070354402}
-  save_slot:
-  - {fileID: 1775833919}
-  - {fileID: 1371679269}
-  - {fileID: 949806665}
-  - {fileID: 1385706468}
-  save: {fileID: 777553960}
-  select_index: 0
-  slot_index: 1
-  save_select: {fileID: 1715134171}
-  IsSave: 0
 --- !u!114 &497210546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2066,6 +2021,49 @@ MonoBehaviour:
   IsExit: 0
   exit_index: 0
   exit_select: {fileID: 1256553539}
+--- !u!114 &497210549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497210541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a23ce8144fb07594c9b925399432dc9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  savedata:
+    Files:
+    - {fileID: 114117446}
+    - {fileID: 190324091}
+    - {fileID: 74061156}
+    - {fileID: 906174585}
+    Images:
+    - {fileID: 86175670}
+    - {fileID: 448417760}
+    - {fileID: 1820929985}
+    - {fileID: 2109191359}
+    Times:
+    - {fileID: 1321283838}
+    - {fileID: 780746620}
+    - {fileID: 1144539920}
+    - {fileID: 245422488}
+    Positions:
+    - {fileID: 920104330}
+    - {fileID: 1056615025}
+    - {fileID: 1518087242}
+    - {fileID: 2070354402}
+  save_slot:
+  - {fileID: 1775833919}
+  - {fileID: 1371679269}
+  - {fileID: 949806665}
+  - {fileID: 1385706468}
+  save: {fileID: 777553960}
+  select_index: 0
+  slot_index: 1
+  save_select: {fileID: 1715134171}
+  IsSave: 0
 --- !u!1 &508306497
 GameObject:
   m_ObjectHideFlags: 0
@@ -2825,7 +2823,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &697962968
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2842,8 +2840,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &697962969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3749,7 +3746,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!95 &997705114
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3766,8 +3763,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1009113039
 GameObject:
   m_ObjectHideFlags: 0
@@ -4364,7 +4360,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1256553541
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4381,8 +4377,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1256553542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5600,7 +5595,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1715134173
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5617,8 +5612,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1715134174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6145,6 +6139,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
