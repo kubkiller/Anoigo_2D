@@ -119,13 +119,12 @@ public class Player : MonoBehaviour
 
     // 상호작용(raycast)코드
     int inx = 0;
+    bool isItem = false;
+    int ItemCnt = 0;
     public void SetRay(Vector2 rayDir, float dis)
     {
         Debug.DrawRay(transform.position, rayDir * dis, Color.red);
         RaycastHit2D hit = Physics2D.Raycast(transform.position, rayDir, dis, LayerMask.GetMask("Ray"));
-
-        bool isItem = false;
-        int ItemCnt = 0;
 
         if (hit.collider != null && Input.GetKeyDown(KeyCode.Z))  // "Ray" 레이어의 콜라이더에 닿으면 상호작용 활성화
         {
@@ -161,6 +160,9 @@ public class Player : MonoBehaviour
                     if (isItem) // 아이템을 가져와야 하는 npc의 경우
                     {
                         // 원래와는 다른 대화가 출력 및 이벤트
+
+
+                        isItem = false;  // 아이템을 가지고 갔으므로 초기화
                     }
                     else
                     {
