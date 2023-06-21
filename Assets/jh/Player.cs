@@ -118,14 +118,73 @@ public class Player : MonoBehaviour
     }
 
     // 상호작용(raycast)코드
+    int inx = 0;
     public void SetRay(Vector2 rayDir, float dis)
     {
         Debug.DrawRay(transform.position, rayDir * dis, Color.red);
         RaycastHit2D hit = Physics2D.Raycast(transform.position, rayDir, dis, LayerMask.GetMask("Ray"));
 
-        if (hit.collider != null && Input.GetKeyDown(KeyCode.Z))
+        bool isItem = false;
+        int ItemCnt = 0;
+
+        if (hit.collider != null && Input.GetKeyDown(KeyCode.Z))  // "Ray" 레이어의 콜라이더에 닿으면 상호작용 활성화
         {
-            MassageManager.instance.gameObject.SetActive(true);
+            if (hit.collider.gameObject.CompareTag("npc"))
+            {
+                // npc를 발견하면 대화창을 염
+                MassageManager.instance.gameObject.SetActive(true);
+
+                if (hit.collider.name=="name")
+                {
+                    //그 npc의 이름에 따라 다른 대화가 출력됨
+                    // 예를 들어 (name=배매는 사람) 이면 "배좀 매달라", (name=구보씨) 이면 "누구세요?" 같이 출력
+
+                    if (this.gameObject.activeSelf == true)
+                    {
+                        if(inx==0) //inx가 0이면
+                        {
+                            //MassageManager.instance.PrintTalk(0);  //0번 라인의 대사 출력
+                            inx += 1;
+                        }
+                        else if (inx == 1) //inx가 1이면
+                        {
+                            //MassageManager.instance.PrintTalk(7);  //7번 라인의 대사 출력
+                            inx += 1;
+                        }
+                    }
+                    if (MassageManager.instance.gameObject.activeSelf == false) //창이 닫히면 인덱스 초기화
+                    {
+                        inx = 0;
+                        Debug.Log("asdf");
+                    }
+
+                    if (isItem) // 아이템을 가져와야 하는 npc의 경우
+                    {
+                        // 원래와는 다른 대화가 출력 및 이벤트
+                    }
+                    else
+                    {
+                        // 아이템을 획득하지 않은 기본 대화
+                    }
+                }
+            }
+            else if (hit.collider.gameObject.CompareTag("Item"))
+            {
+                // 아이템을 획득함
+                ItemCnt += 1;  // 아이템을 여러개 모아야 하는 경우 1개씩 증가
+                if (ItemCnt == 5) // 아이템을 5개 필요로 한다면
+                {
+                    isItem = true; // isItem 참으로 함
+                }
+            }
+            else if (hit.collider.gameObject.CompareTag("stone"))
+            {
+                //바위가 밀림
+            }
+            else if (hit.collider.gameObject.CompareTag("portal"))
+            {
+                // 다음 스테이지 이동
+            }
         }
     }
 }

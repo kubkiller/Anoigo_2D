@@ -427,6 +427,7 @@ GameObject:
   - component: {fileID: 445149293}
   - component: {fileID: 445149292}
   - component: {fileID: 445149291}
+  - component: {fileID: 445149295}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -492,7 +493,6 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -518,6 +518,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &445149295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445149290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb8be9647a4f81408893d5920d37432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &567261370
 GameObject:
   m_ObjectHideFlags: 0
@@ -5418,9 +5430,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1857996456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 37f5a2e1ae7144f41a162299209cf061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  massageTxt: {fileID: 1013129710}
+  sp2: {fileID: 790421620}
+  system: {fileID: 4900000, guid: 6bd4dfb1268b8384c82effe81eaa854e, type: 3}
+  speech: {fileID: 4900000, guid: e864160345eeca049b87355c87c493d2, type: 3}
+  SpeechMassage: []
+  spriteList: []
+  CharName: []
 --- !u!1 &1864809967
 GameObject:
   m_ObjectHideFlags: 0
@@ -5569,6 +5588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -5897,7 +5917,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -793.0101, y: 334.65637}
+  m_AnchoredPosition: {x: -793.01, y: 334.65637}
   m_SizeDelta: {x: -1586, y: -669.3127}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2120557474

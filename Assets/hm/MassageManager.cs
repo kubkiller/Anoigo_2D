@@ -47,27 +47,6 @@ public class MassageManager : MonoBehaviour
         {
             this.gameObject.SetActive(false);
         }
-
-        if (this.gameObject.activeSelf == true && inx == 0)
-        {
-            PrintMassage(SpeechMassage, 0, 0, sp2);
-            inx += 1;
-        }
-        else if (Input.GetKeyDown(KeyCode.Z) && inx == 1)
-        {
-            PrintMassage(SpeechMassage, 1, 0, sp2);
-            inx += 1;
-        }
-        else if (Input.GetKeyDown(KeyCode.Z) && inx == 2)
-        {
-            PrintMassage(SpeechMassage, 2, 1, sp2);
-            inx += 1;
-        }
-        if (this.gameObject.activeSelf == false)
-        {
-            inx = 0;
-            Debug.Log("asdf");
-        }
     }
 
     public List<string> CharName;
@@ -125,9 +104,9 @@ public class MassageManager : MonoBehaviour
         return curSp;
     }
 
-    void PrintTalk(int sInx1, int sInx2)
+    public void PrintTalk(int i)
     {
-
+        PrintMassage(SpeechMassage, i, 0, sp2);
     }
 
     /* List<string> SetMassage(TextAsset script)

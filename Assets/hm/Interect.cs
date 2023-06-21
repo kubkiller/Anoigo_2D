@@ -38,6 +38,7 @@ public class Interect : MonoBehaviour
         transform.position += moveDir * speed;
     }
 
+    int inx = 0;
     public void SetRay(Vector2 rayDir, float dis)
     {
         Debug.DrawRay(transform.position, rayDir * dis, Color.red);
@@ -45,7 +46,25 @@ public class Interect : MonoBehaviour
 
         if (hit.collider != null && Input.GetKeyDown(KeyCode.Z))
         {
-            MassageManager.instance.gameObject.SetActive(true);
+            if (hit.collider.gameObject.CompareTag("npc"))
+            {
+                MassageManager.instance.gameObject.SetActive(true);
+                if (this.gameObject.activeSelf == true)
+                {
+                    Debug.Log(inx);
+                    MassageManager.instance.PrintTalk(inx);
+                    inx += 1;
+                }
+                if (MassageManager.instance.gameObject.activeSelf == false)
+                {
+                    inx = 0;
+                    Debug.Log("asdf");
+                }
+            }
+            else if (hit.collider.gameObject.CompareTag("Enemy"))
+            {
+                Debug.Log("0987y");
+            }
         }
     }
 }
